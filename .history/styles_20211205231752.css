@@ -1,0 +1,9 @@
+:root {
+  --main-background-color: rgb(37, 37, 37);
+}
+
+* {
+  background-color: var(--main-background-color);
+  box-sizing: border-box;
+  color: rgb(220, 221, 221);
+}
