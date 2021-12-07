@@ -88,8 +88,8 @@ function startFunction() {
   });
 }
 colapsibleDiv.addEventListener("click", () => {
-  content.classList.toggle("active");
-
+  colapsibleDiv.classList.toggle("active");
+  const content = colapsibleDiv.nextElementSibling;
   if (content.style.display === "block") {
     content.style.display = "none";
   } else {

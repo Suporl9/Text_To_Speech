@@ -108,6 +108,7 @@ body {
   background: none;
 }
 /* form */
+
 .Inputform {
   background: none;
   display: flex;
@@ -159,6 +160,7 @@ textarea {
     height: 20px;
     /* width: 300%; */
   }
+
   to {
     margin-left: 0%;
     /* width: 100%; */

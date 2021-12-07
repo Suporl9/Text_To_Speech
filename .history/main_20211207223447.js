@@ -3,7 +3,6 @@ let gridContainer = document.querySelector(".gridContainer");
 const title = document.querySelector(".title");
 // console.log(title);
 const colapsibleDiv = document.querySelector(".collapsible");
-const content = document.querySelector(".content1");
 const ImagesAndTexts = [
   {
     image: "happy.jpg",
@@ -88,11 +87,5 @@ function startFunction() {
   });
 }
 colapsibleDiv.addEventListener("click", () => {
-  content.classList.toggle("active");
-
-  if (content.style.display === "block") {
-    content.style.display = "none";
-  } else {
-    content.style.display = "block";
-  }
+  colapsibleDiv.classList.toggle("active");
 });

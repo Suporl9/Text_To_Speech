@@ -108,6 +108,7 @@ body {
   background: none;
 }
 /* form */
+
 .Inputform {
   background: none;
   display: flex;
@@ -150,17 +151,33 @@ textarea {
   margin-bottom: 2%;
 }
 .active {
-  animation-duration: 1s;
-  animation-name: slidein;
+  animation: myfirst 5s 2;
+  animation-direction: alternate;
 }
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    height: 20px;
-    /* width: 300%; */
+@keyframes myfirst {
+  0% {
+    background: red;
+    left: 0px;
+    top: 0px;
   }
-  to {
-    margin-left: 0%;
-    /* width: 100%; */
+  25% {
+    background: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background: red;
+    left: 0px;
+    top: 0px;
   }
 }

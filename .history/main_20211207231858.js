@@ -88,7 +88,7 @@ function startFunction() {
   });
 }
 colapsibleDiv.addEventListener("click", () => {
-  content.classList.toggle("active");
+  colapsibleDiv.classList.toggle("active");
 
   if (content.style.display === "block") {
     content.style.display = "none";
