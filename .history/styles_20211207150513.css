@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat:wght@100;300&display=swap");
 :root {
-  --main-background-color: rgb(255, 255, 255);
-  /* --main-background-color: rgb(44, 44, 44); */
+  /* --main-background-color: rgb(255, 255, 255); */
+  --main-background-color: rgb(44, 44, 44);
 }
 
 * {
   background-color: var(--main-background-color);
   box-sizing: border-box;
-  /* color: rgb(255, 255, 255); */
+  color: rgb(255, 255, 255);
   font-family: "Lato", sans-serif;
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -15,7 +15,7 @@
 }
 body {
   margin-top: 5%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .title {
   width: 90%;
@@ -64,12 +64,26 @@ body {
 }
 .grid-item:hover > .imgClass {
   opacity: 0.3;
+  /* cursor: pointer; */
 }
+
 .labelForSpeech {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-shadow: 2px 2px 2px #000000;
+  /* position: absolute;
+  display: flex;
+  justify-content: center; */
+  /* align-self: center; */
+  /* align-content: center; */
+  /* text-align: center; */
+  /* left: 20%;
+  top: 40%; */
+  /* background: none;
+  text-shadow: 2px 2px 2px #000000; */
+  position: absolute; /* Important */
+  top: 50%; /* Position Y halfway in */
+  left: 50%; /* Position X halfway in */
+  transform: translate(-50%, -50%); /* Move it halfway back(x,y) */
+  width: 100px; /* Any width */
+  height: 100px; /* Any height */
+  /* background: blue; */
   background: none;
 }

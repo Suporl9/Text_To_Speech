@@ -1,3 +1,5 @@
+//ok what are we building(I DONT KNOW DUDE)
+//make a array with the image and label so that we can loop them with for loop and append to grid item div class
 let gridContainer = document.querySelector(".gridContainer");
 
 const title = document.querySelector(".title");
@@ -48,7 +50,7 @@ console.log(window.speechSynthesis);
 //   console.log(window.speechSynthesis.getVoices());
 // }, 10000);
 let arr = [];
-const synth = window.speechSynthesis;
+// const synth = window.speechSynthesis;
 // synth.addEventListener("voiceschanged", () => {
 //   // console.log(synth.getVoices());
 //   let Voices = synth.getVoices();
@@ -75,7 +77,7 @@ function startFunction() {
 
     grid_item.innerHTML = `
         <img src="./assets/${ImageAndText.image}" class="imgClass"/>
-        <h2 class="labelForSpeech" >${ImageAndText.text.toUpperCase()}</h2>
+        <h1 class="labelForSpeech" >${ImageAndText.text.toUpperCase()}</div>
     `;
 
     gridContainer.appendChild(grid_item);
