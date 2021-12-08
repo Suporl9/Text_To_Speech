@@ -96,6 +96,7 @@ Inputform.onsubmit = function (e) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].name === selectedOption) {
       utterThis.voice = arr[i];
+      console.log("utterThis.voice", utterThis);
     }
   }
 
@@ -116,7 +117,6 @@ function startFunction() {
 
     grid_item.addEventListener("click", () => {
       let speakThis = new SpeechSynthesisUtterance(ImageAndText.text);
-
       synth.speak(speakThis);
     });
   });

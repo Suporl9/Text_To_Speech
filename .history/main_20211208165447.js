@@ -3,16 +3,8 @@ let gridContainer = document.querySelector(".gridContainer");
 const title = document.querySelector(".title");
 // console.log(title);
 const colapsibleDiv = document.querySelector(".collapsible");
-
 const content = document.querySelector(".content1");
-
-let voiceSelect = document.getElementById("voiceSelect");
-
-let SpeakText = document.querySelector(".SpeakText");
-
-const Inputform = document.querySelector(".Inputform");
-
-const textValue = document.querySelector(".textValue");
+let voiceSelect = document.querySelector(".voiceSelect");
 
 const ImagesAndTexts = [
   {
@@ -54,54 +46,35 @@ const ImagesAndTexts = [
   },
 ];
 
+console.log(window.speechSynthesis);
+// setTimeout(() => {
+//   console.log(window.speechSynthesis.getVoices());
+// }, 10000);
 let arr = [];
-
 const synth = window.speechSynthesis;
-
 synth.addEventListener("voiceschanged", () => {
   // console.log(synth.getVoices());
-
   let Voices = synth.getVoices();
-
   Voices.forEach((voice) => {
     arr.push(voice);
   });
-
   for (let i = 0; i < Voices.length; i++) {
     let option = document.createElement("option");
-
-    option.classList.add("optionStyle");
-
-    option.textContent = Voices[i].name + " (" + Voices[i].lang + ")";
-
-    if (Voices[i].default) {
-      option.textContent += " -- DEFAULT";
-    }
-
-    option.setAttribute("data-lang", Voices[i].lang);
-
-    option.setAttribute("data-name", Voices[i].name);
-
-    voiceSelect.appendChild(option);
   }
+
+  console.log("arr0", arr);
 });
+// console.log("arr", arr);
 
-Inputform.onsubmit = function (e) {
-  e.preventDefault();
+// title.addEventListener("click", () => {
+//   let utterThis = new SpeechSynthesisUtterance(title.innerHTML);
 
-  let utterThis = new SpeechSynthesisUtterance(textValue.value);
+//   synth.speak(utterThis);
+// });
 
-  let selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
-
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].name === selectedOption) {
-      utterThis.voice = arr[i];
-    }
-  }
-
-  synth.speak(utterThis);
-};
-
+// const ut = new SpeechSynthesisUtterance("No warning should arise");////
+// speechSynthesis.speak(ut);////
+// grid_item.innerHTML = "efjs";
 function startFunction() {
   ImagesAndTexts.forEach((ImageAndText) => {
     let grid_item = document.createElement("div");
@@ -116,12 +89,10 @@ function startFunction() {
 
     grid_item.addEventListener("click", () => {
       let speakThis = new SpeechSynthesisUtterance(ImageAndText.text);
-
       synth.speak(speakThis);
     });
   });
 }
-
 colapsibleDiv.addEventListener("click", () => {
   content.classList.toggle("active");
 

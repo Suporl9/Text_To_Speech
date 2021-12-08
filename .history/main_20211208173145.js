@@ -116,7 +116,6 @@ function startFunction() {
 
     grid_item.addEventListener("click", () => {
       let speakThis = new SpeechSynthesisUtterance(ImageAndText.text);
-
       synth.speak(speakThis);
     });
   });

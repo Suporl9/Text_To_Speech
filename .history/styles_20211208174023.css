@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Montserrat:wght@100;300&display=swap");
 :root {
   --main-background-color: rgb(255, 255, 255);
+  --main-gray-color: rgb(88, 63, 63);
   /* --main-background-color: rgb(44, 44, 44); */
-  --main-red-color: rgb(252, 53, 53);
-  --main-gray-color: rgb(61, 60, 60);
-  --main-black: rgb(0, 0, 0);
 }
 
 * {
@@ -30,7 +28,7 @@ body {
   margin: auto;
   display: flex;
   flex-direction: row;
-  color: var(--main-background-color);
+  color: #ffffff;
   /* flex: 2 1; */
   justify-content: space-between;
 }
@@ -43,7 +41,7 @@ body {
 }
 .collapsible,
 .content1 {
-  background-color: var(--main-red-color);
+  background-color: rgb(252, 53, 53);
 }
 .collapsible {
   width: 100%;
@@ -86,7 +84,7 @@ body {
 }
 .grid-item {
   border-radius: 5px;
-  background: var(--main-black);
+  background: black;
   position: relative;
   cursor: pointer;
 }
@@ -107,7 +105,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-shadow: 2px 2px 2px var(--main-black);
+  text-shadow: 2px 2px 2px #000000;
   background: none;
 }
 /* form */
@@ -120,7 +118,7 @@ body {
 .SpeakText,
 #voiceSelect,
 .optionStyle {
-  color: var(--main-background-color);
+  color: #ffffff;
   background: var(--main-gray-color);
   cursor: pointer;
   width: 100%;
@@ -131,10 +129,10 @@ textarea {
   width: 100%;
   height: 11vh;
   resize: none;
-  background: var(--main-background-color);
+  background: #fff;
   border-radius: 5px;
   outline: none;
-  color: var(--main-black);
+  color: #000000;
   padding: 1% 2%;
   font-size: 17px;
 }

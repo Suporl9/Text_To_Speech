@@ -51,7 +51,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  color: var(--main-background-color);
+  color: #ffffff;
   /* padding: 13%; */
   /* justify-content: flex-start; */
   border: none;
@@ -107,7 +107,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-shadow: 2px 2px 2px var(--main-black);
+  text-shadow: 2px 2px 2px #000000;
   background: none;
 }
 /* form */
@@ -131,7 +131,7 @@ textarea {
   width: 100%;
   height: 11vh;
   resize: none;
-  background: var(--main-background-color);
+  background: #fff;
   border-radius: 5px;
   outline: none;
   color: var(--main-black);

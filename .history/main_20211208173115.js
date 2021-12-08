@@ -3,17 +3,11 @@ let gridContainer = document.querySelector(".gridContainer");
 const title = document.querySelector(".title");
 // console.log(title);
 const colapsibleDiv = document.querySelector(".collapsible");
-
 const content = document.querySelector(".content1");
-
 let voiceSelect = document.getElementById("voiceSelect");
-
 let SpeakText = document.querySelector(".SpeakText");
-
 const Inputform = document.querySelector(".Inputform");
-
 const textValue = document.querySelector(".textValue");
-
 const ImagesAndTexts = [
   {
     image: "happy.jpg",
@@ -90,12 +84,11 @@ Inputform.onsubmit = function (e) {
   e.preventDefault();
 
   let utterThis = new SpeechSynthesisUtterance(textValue.value);
-
   let selectedOption = voiceSelect.selectedOptions[0].getAttribute("data-name");
-
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].name === selectedOption) {
       utterThis.voice = arr[i];
+      console.log("utterThis.voice", utterThis);
     }
   }
 
@@ -116,7 +109,6 @@ function startFunction() {
 
     grid_item.addEventListener("click", () => {
       let speakThis = new SpeechSynthesisUtterance(ImageAndText.text);
-
       synth.speak(speakThis);
     });
   });
